@@ -3,4 +3,8 @@
     <string name="app_name">НМедиа</string>
     <string name="nmedia">НМедиа!</string>
     <string name="authorHeadline">Нетология. Университет интернет-профессий</string>
+    <string name="author">Нетология. Университет интернет-профессий будущего</string>
+    <string name="published">05 марта в 20:50</string>
+    <string name="_25">25</string>
+    <string name="sharedNumber">25</string>
 </resources>
