@@ -79,64 +79,63 @@
         app:constraint_referenced_ids="postText" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/icLiked"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postText"
-        app:srcCompat="@android:drawable/ic_menu_send" />
+        app:srcCompat="@drawable/ic_like_24" />
 
     <TextView
-        android:id="@+id/likes"
+        android:id="@+id/likesNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_25"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/postText" />
+        android:layout_marginStart="6dp"
+        android:text="@string/likesNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/icLiked"
+        app:layout_constraintStart_toEndOf="@+id/icLiked"
+        app:layout_constraintTop_toTopOf="@+id/icLiked" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/likes"
-        app:layout_constraintStart_toEndOf="@+id/likes"
-        app:layout_constraintTop_toTopOf="@+id/likes"
-        app:srcCompat="@android:drawable/ic_menu_share" />
-
-    <TextView
         android:id="@+id/shared"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sharedNumber"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="38dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postText"
-        app:srcCompat="@android:drawable/ic_menu_view" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/likesNumber"
+        app:layout_constraintStart_toEndOf="@+id/likesNumber"
+        app:layout_constraintTop_toTopOf="@+id/likesNumber"
+        app:srcCompat="@drawable/ic_share_24" />
 
     <TextView
+        android:id="@+id/sharedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/sharedNum"
+        app:layout_constraintBottom_toBottomOf="@+id/shared"
+        app:layout_constraintStart_toEndOf="@+id/shared"
+        app:layout_constraintTop_toTopOf="@+id/shared" />
+
+    <ImageView
         android:id="@+id/views"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="500"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/postText"
+        app:srcCompat="@drawable/ic_views_24" />
+
+    <TextView
+        android:id="@+id/viewsNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/viewsNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/views"
+        app:layout_constraintStart_toEndOf="@+id/views"
+        app:layout_constraintTop_toTopOf="@+id/views" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
