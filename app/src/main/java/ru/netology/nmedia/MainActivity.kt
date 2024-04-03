@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
             author = "Нетология. Университет интернет-профессий будущего",
             content = "Привет! Это новая Нетология! Привет! Это новая Нетология!",
             published = "21 мая в 18:36",
-            likes = 1099999,
+            likes = 11199,
             share = 999999,
             likedByMe = false
         )
@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
             author.text = post.author
             published.text= post.published
             postText.text = post.content
-            likesNumber.text = post.likes.toString()
-            sharedNumber.text = post.share.toString()
+            likesNumber.text = CountChange(post.likes)
+            sharedNumber.text = CountChange(post.share)
 
 
             if(post.likedByMe) {
@@ -53,9 +53,10 @@ class MainActivity : AppCompatActivity() {
         var countToPost = count.toString()
 
         when {
-            count > 1099999 && (count%1000000!=0) -> countToPost = "%.1f".format(count.toDouble()/1000000).toString() + "M"
+            count > 1099999 && (count%1000000!=0) -> countToPost = "%.1f".format(count.toDouble()/1000000) + "M"
             count > 999999 -> countToPost = (count/1000000).toString() + "M"
-            count > 1099 && (count%1000!=0) -> countToPost = "%.1f".format(count.toDouble()/1000).toString() + "K"
+            count > 9999 && (count%1000!=0) -> countToPost = (count/1000).toString() + "K"
+            count > 1099 && (count%1000!=0) -> countToPost = "%.1f".format(count.toDouble()/1000) + "K"
             count > 999 -> countToPost = (count/1000).toString() + "K"
             else -> countToPost
         }
