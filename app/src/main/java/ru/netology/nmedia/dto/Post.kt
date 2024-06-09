@@ -8,5 +8,6 @@ data class Post(
     var likes: Int = 0,
     var share: Int = 0,
     val likedByMe: Boolean = false,
-    val isShared: Boolean = true
+    val isShared: Boolean = true,
+    val sharedByMe: Boolean
 )

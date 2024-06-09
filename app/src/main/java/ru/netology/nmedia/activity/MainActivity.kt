@@ -25,29 +25,25 @@ class MainActivity : AppCompatActivity() {
                 likesNumber.text = countChange(post.likes)
                 sharedNumber.text = countChange(post.share)
 
-                if (post.likedByMe) {
-                    icLiked?.setImageResource(R.drawable.ic_liked_24)
-                }
-
-               // icLiked.setOnClickListener {
-                 //   if (post.likedByMe) post.likes-- else post.likes++
-                  //  post.likedByMe = !post.likedByMe
-                 //   icLiked.setImageResource(
-                 //       if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24
-                 //   )
-                 //   likesNumber.text = countChange(post.likes)
-             //  }
+                icLiked.setImageResource(
+                    if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24
+                )
 
                 shared.setOnClickListener {
-                  post.share++
+                    viewModel.share()
+                    if (!post.sharedByMe) post.share++
                     sharedNumber.text = countChange(post.share)
+                }
+
+                icLiked.setOnClickListener {
+                    viewModel.like()
+                    if (!post.likedByMe) post.likes++
+                    likesNumber.text = countChange(post.likes)
                 }
             }
         }
-        binding.icLiked.setOnClickListener {
-            viewModel.like()
-        }
     }
+
     fun countChange(count: Int): String {
         var countToPost = count.toString()
         val decimalFormat = DecimalFormat("#.#")
