@@ -31,14 +31,12 @@ class MainActivity : AppCompatActivity() {
 
                 shared.setOnClickListener {
                     viewModel.share()
-                    if (!post.sharedByMe) post.share++
-                    sharedNumber.text = countChange(post.share)
+                    if (!post.sharedByMe) sharedNumber.text = countChange(post.share)
                 }
 
                 icLiked.setOnClickListener {
                     viewModel.like()
-                    if (!post.likedByMe) post.likes++
-                    likesNumber.text = countChange(post.likes)
+                    if (!post.likedByMe) likesNumber.text = countChange(post.likes)
                 }
             }
         }
