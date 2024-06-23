@@ -30,14 +30,10 @@ class MainActivity : AppCompatActivity() {
                 )
 
                 shared.setOnClickListener {
-                    viewModel.share()
-                    if (!post.sharedByMe) sharedNumber.text = countChange(post.share)
-                }
+                    viewModel.share() }
 
                 icLiked.setOnClickListener {
-                    viewModel.like()
-                    if (!post.likedByMe) likesNumber.text = countChange(post.likes)
-                }
+                    viewModel.like() }
             }
         }
     }
