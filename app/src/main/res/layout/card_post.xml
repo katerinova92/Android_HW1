@@ -10,6 +10,7 @@
         android:id="@+id/avatar"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@id/barrier"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:ellipsize="end"
         android:maxLines="1"
         app:layout_constraintBottom_toTopOf="@+id/published"
@@ -47,6 +49,7 @@
         android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/avatar"
@@ -65,13 +68,12 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="96dp"
         android:layout_marginEnd="16dp"
         android:text="@string/postText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/barrier" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier2"
