@@ -5,4 +5,9 @@
     <string name="authorHeadline">Нетология. Университет интернет-профессий</string>
     <string name="author">Нетология. Университет интернет-профессий будущего</string>
     <string name="published">05 марта в 20:50</string>
+    <string name="remove">Удалить</string>
+    <string name="post_text">Введите текст...</string>
+    <string name="edit">Редактировать</string>
+    <string name="error_empty_content">Это поле не может быть пустым</string>
+    <string name="edit_bar_text">Редактирование</string>
 </resources>

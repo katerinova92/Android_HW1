@@ -8,4 +8,9 @@
     <string name="likesNumber" translatable="false">25</string>
     <string name="sharedNum" translatable="false">16</string>
     <string name="viewsNumber" translatable="false">536</string>
+    <string name="remove">Remove</string>
+    <string name="post_text">Type your text here...</string>
+    <string name="edit">Edit</string>
+    <string name="error_empty_content">This field can not be empty</string>
+    <string name="edit_bar_text">Edit</string>
 </resources>
