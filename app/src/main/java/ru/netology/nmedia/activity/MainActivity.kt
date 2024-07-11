@@ -1,6 +1,8 @@
 package ru.netology.nmedia.activity
 
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +54,9 @@ class MainActivity : AppCompatActivity() {
             if (it.id != 0L) {
                 binding.content.setText(it.content)
                 binding.content.focusAndShowKeyboard()
+                binding.editBoxGroup.visibility = VISIBLE
+            } else {
+                binding.editBoxGroup.visibility = GONE
             }
         }
 
