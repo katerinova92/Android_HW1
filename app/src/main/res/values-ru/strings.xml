@@ -10,5 +10,5 @@
     <string name="edit">Редактировать</string>
     <string name="error_empty_content">Это поле не может быть пустым</string>
     <string name="edit_bar_text">Редактирование</string>
-    <string name="edit_post_nnetology">Редактирование поста \nНетология</string>
+    <string name="edit_post_nnetology">Редактирование поста</string>
 </resources>

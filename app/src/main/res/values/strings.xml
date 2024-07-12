@@ -13,5 +13,5 @@
     <string name="edit">Edit</string>
     <string name="error_empty_content">This field can not be empty</string>
     <string name="edit_bar_text">Edit</string>
-    <string name="edit_post_nnetology">Edit post \nNetology</string>
+    <string name="edit_post_nnetology">Edit post</string>
 </resources>

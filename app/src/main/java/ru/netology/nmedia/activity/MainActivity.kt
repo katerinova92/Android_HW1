@@ -60,6 +60,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.editBoxClose.setOnClickListener{
+            viewModel.cancelEdit()
+            binding.content.setText("")
+            binding.content.clearFocus()
+            AndroidUtils.hideKeyboard(binding.content)
+        }
+
         binding.save.setOnClickListener {
             val content = binding.content.text.toString()
             if (content.isBlank()) {
