@@ -45,15 +45,15 @@
         app:layout_constraintTop_toBottomOf="@id/author"
         tools:text="@string/published" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/avatar"
-        app:srcCompat="@drawable/baseline_more_vert_24"
+        app:icon="@drawable/baseline_more_vert_24"
         tools:ignore="ContentDescription" />
 
     <androidx.constraintlayout.widget.Barrier
@@ -82,44 +82,46 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="postText" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/icLiked"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
+        style="@style/Widget.AppTheme.LikeButton"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
         android:layout_marginTop="16dp"
-        android:background="@android:color/transparent"
+        android:checkable="true"
+        app:icon="@drawable/ic_like_selector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postText"
-        app:srcCompat="@drawable/ic_like_24"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/likesNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="2dp"
         android:text="@string/likesNumber"
         app:layout_constraintBottom_toBottomOf="@+id/icLiked"
         app:layout_constraintStart_toEndOf="@+id/icLiked"
         app:layout_constraintTop_toTopOf="@+id/icLiked" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/shared"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/likesNumber"
         app:layout_constraintStart_toEndOf="@+id/likesNumber"
         app:layout_constraintTop_toTopOf="@+id/likesNumber"
-        app:srcCompat="@drawable/ic_share_24"
+        app:icon="@drawable/ic_share_24"
+        app:strokeColor="@android:color/transparent"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/sharedNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="2dp"
         android:text="@string/sharedNum"
         app:layout_constraintBottom_toBottomOf="@+id/shared"
         app:layout_constraintStart_toEndOf="@+id/shared"

@@ -45,9 +45,7 @@ class PostViewHolder(
             likesNumber.text = countChange(post.likes)
             sharedNumber.text = countChange(post.share)
 
-            icLiked.setImageResource(
-                if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24
-            )
+            icLiked.isChecked = post.likedByMe
 
             icLiked.setOnClickListener {
                 onInteractionListener.onLike(post)
